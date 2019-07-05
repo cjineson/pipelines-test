@@ -1,0 +1,14 @@
+# Test Azure Devops
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Hello
+      pwd
+      ls -al
